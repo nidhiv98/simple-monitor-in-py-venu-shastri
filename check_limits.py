@@ -10,6 +10,7 @@ def battery_is_ok(temperature, soc, charge_rate):
     print('Charge rate is out of range!')
     return False
 
+  
   return True
 
 
