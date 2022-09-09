@@ -1,19 +1,11 @@
 
 def battery_is_ok(temperature, soc, charge_rate):
-  '''if temperature < 0 or temperature > 45:
-    print('Temperature is out of range!')
-    return False
-  elif soc < 20 or soc > 80:
-    print('State of Charge is out of range!')
-    return False
-  elif charge_rate > 0.8:
-    print('Charge rate is out of range!')
-    return False
-   return True'''
+  
     t1=check_temp(temperature)
     s1=check_soc(soc)
     c1=check_charge(charge_rate)
-    aggregate_bat(t1,s1,c1)
+    a1=aggregate_bat(t1,s1,c1)
+    return a1
   
   
 def aggregate_bat(t,s,c):
