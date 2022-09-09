@@ -1,6 +1,5 @@
 
 def battery_is_ok(temperature, soc, charge_rate):
-  
     temperature_check=check_temp(temperature)
     soc_check=check_soc(soc)
     charge_check=check_charge(charge_rate)
@@ -14,7 +13,7 @@ def aggregate_bat(temperature_check,soc_check,charge_check):
 def check_temp(temperature):
  if temperature < 0 or temperature > 45:
     return False
-   return True
+  return True
   
 def check_soc(soc):
   if  soc < 20 or soc > 80:
