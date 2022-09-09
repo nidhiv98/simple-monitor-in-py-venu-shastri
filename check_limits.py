@@ -11,19 +11,19 @@ def aggregate_bat(temperature_check,soc_check,charge_check):
    return temperature_check and soc_check and charge_check
  
 def check_temp(temperature):
- if temperature < 0 or temperature > 45:
-    return False
-  return True
+    if temperature < 0 or temperature > 45:
+        return False
+    return True
   
 def check_soc(soc):
-  if  soc < 20 or soc > 80:
-    return False
-   return True
+    if  soc < 20 or soc > 80:
+        return False
+    return True
   
 def check_charge(charge_rate):
-   if   charge_rate > 0.8:
-    return False
-   return True
+    if   charge_rate > 0.8:
+        return False
+    return True
  
   
 def print_toConsole(msg):
