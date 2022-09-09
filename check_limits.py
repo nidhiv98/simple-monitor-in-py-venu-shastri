@@ -9,9 +9,8 @@ def battery_is_ok(temperature, soc, charge_rate):
   
   
 def aggregate_bat(t,s,c):
-   if t and s and c:
-      return True
-    return False
+   return t and s and c:
+     
   
    
   
