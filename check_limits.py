@@ -1,15 +1,15 @@
 
-def battery_is_ok(temperature, soc, charge_rate,message):
+def battery_is_ok(temperature, soc, charge_rate):
   
-    t1=check_temp(temperature)
-    s1=check_soc(soc)
-    c1=check_charge(charge_rate)
-    a1=aggregate_bat(t1,s1,c1)
-    return a1
+    temperature_check=check_temp(temperature)
+    soc_check=check_soc(soc)
+    charge_check=check_charge(charge_rate)
+    aggregate_check=aggregate_bat(temperature_check,soc_check,charge_check)
+    return aggregate_check
   
   
-def aggregate_bat(t,s,c):
-   return t and s and c:
+def aggregate_bat(temperature_check,soc_check,charge_check):
+   return temperature_check and soc_check and charge_check
  
 def check_temp(temperature):
  if temperature < 0 or temperature > 45:
@@ -32,5 +32,5 @@ def print_toConsole(msg):
   
 
 if __name__ == '__main__':
-  assert(battery_is_ok(25, 70, 0.7,'Battery is ok') is True)
-  assert(battery_is_ok(50, 85, 0,'Battery is not ok') is False)
+  assert(battery_is_ok(25, 70, 0.7) is True)
+  assert(battery_is_ok(50, 85, 0) is False)
