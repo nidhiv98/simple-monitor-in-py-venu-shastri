@@ -13,8 +13,10 @@ def battery_is_ok(temperature, soc, charge_rate):
     t1=check_temp(temperature)
     s1=check_soc(soc)
     c1=check_charge(charge_rate)
-    
-    if t1 and s1 and c1:
+    aggregate_bat(t1,s1,c1)
+  
+  def aggregate_bat(t,s,c)
+    if t and s and c:
       return True
     return False
   
